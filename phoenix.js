@@ -35,24 +35,24 @@ require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
 require ( './shortcuts/grow.js' );
 require ( './shortcuts/halves.js' );
-require ( './shortcuts/pause.js' );
-require ( './shortcuts/quit.js' );
+// require ( './shortcuts/pause.js' );
+// require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
 require ( './shortcuts/sides.js' );
-require ( './shortcuts/spaces.js' );
+// require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
 
-require ( './magic/chrome.js' );
-require ( './magic/developer_tools.js' );
-require ( './magic/finder.js' );
-require ( './magic/hyper.js' );
-require ( './magic/terminal.js' );
-require ( './magic/vscode.js' );
+// require ( './magic/chrome.js' );
+// require ( './magic/developer_tools.js' );
+// require ( './magic/finder.js' );
+// require ( './magic/hyper.js' );
+// require ( './magic/terminal.js' );
+///require ( './magic/vscode.js' );
 
-require ( './spaces/alfred.js' );
-require ( './spaces/list.js' );
+// require ( './spaces/alfred.js' );
+// require ( './spaces/list.js' );
 // require ( './spaces/overlay.js' );
 
 /* LOADED */
