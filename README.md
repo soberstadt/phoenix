@@ -135,14 +135,13 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + `</kbd> | Focus to or open [Noty](https://github.com/fabiospampinato/noty)|
+| <kbd>⇪ + `</kbd> | Focus to or open [Notable](https://notable.md)|
 | <kbd>⇪ + C</kbd> | Focus to or open [Chrome](https://www.google.com/chrome)|
 | <kbd>⇪ + D</kbd> | Focus to or open [Chrome Developer Tools](https://developer.chrome.com/devtools)|
 | <kbd>⇪ + V</kbd> | Focus to or open [Visual Studio Code](https://code.visualstudio.com)|
 | <kbd>⇪ + F</kbd> | Focus to or open Finder|
-| <kbd>⇪ + T</kbd> | Focus to or open [Hyper](https://github.com/zeit/hyper)|
+| <kbd>⇪ + T</kbd> | Focus to or open [iTerm](http://iterm2.com)|
 | <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/)|
-| <kbd>⇪ + Z</kbd> | Focus to or open [Franz](https://meetfranz.com)|
 
 ### Spaces
 
@@ -181,6 +180,10 @@ In order to make this work you have to open `System Preferences -> Keyboard -> S
 
 ### Pause/Resume Application
 
+<p align="center">
+	<img src="resources/pause_resume.gif" alt="Pause/Resume Application" style="width:690px">
+</p>
+
 This can be used for saving battery, pausing single-player games etc.
 
 | Shortcut | Description |
@@ -188,6 +191,10 @@ This can be used for saving battery, pausing single-player games etc.
 | <kbd>⇪ + F8</kbd> | Pause or resume the current application |
 
 ### Quit Application
+
+<p align="center">
+	<img src="resources/quit.gif" alt="Quit Application" style="width:690px">
+</p>
 
 Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no more! Now in order to quit an app you have to trigger <kbd>⌘Q</kbd> twice in a short timeframe. Stop [wasting 10$](https://clickontyler.com/commandq) for something so basic.
 
@@ -203,6 +210,16 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⇪ + §</kbd> | If there are only 2 windows in the current space put them in split view |
 
+## Mouse
+
+### Snapping
+
+<p align="center">
+	<img src="resources/snapping.gif" alt="Snapping" style="width:690px">
+</p>
+
+Drag a window to an edge or corner to snap it into place.
+
 ## Magic
 
 ### Chrome
@@ -215,7 +232,7 @@ If it gets opened, positionate it to the bottom-right corner, and shrink Visual 
 
 If it gets closed, restore Visual Studio Code's height.
 
-### Terminal/Hyper/Finder
+### Terminal/iTerm2/Finder
 
 If one of these apps' windows gets opened, positionate it to bottom-left corner.
 

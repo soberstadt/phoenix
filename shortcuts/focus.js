@@ -31,6 +31,21 @@ const launchVSC = () => Task.run ( '/usr/local/bin/code', ['-n'] );
 
 const launchHyper = () => Task.run ( '/usr/local/bin/hyper' );
 
+const launchiTerm = `
+  if application "iTerm" is running then
+    tell application "iTerm"
+      activate
+      if not (exists current window) then
+        create window with default profile
+      end if
+    end tell
+  else
+    tell application "iTerm"
+      create window with default profile
+    end tell
+  end if
+`;
+
 const launchTerminal = `
   tell application "Terminal"
     do script ""
@@ -40,7 +55,7 @@ const launchTerminal = `
 
 const launchFinder = `
   tell application "Finder"
-    make new Finder window to (path to downloads folder)
+    make new Finder window to (get new window target of Finder preferences)
     activate
   end tell
 `;
@@ -79,14 +94,30 @@ function callbackHyper ( isNewWindow ) {
 
 }
 
+function callbackiTerm ( isNewWindow ) {
+
+  if ( !isNewWindow ) return;
+
+  setTimeout ( () => {
+
+    const focused = Window.focused ();
+
+    if ( !focused ) return;
+
+    magiciTermOpen ( focused );
+
+  }, 600 );
+
+}
+
 /* FOCUS */
 
 const focus = [
-  ['c', HYPER, ['Google Chrome', false, /^(?!Developer Tools)/, launchChrome]],
-  ['d', HYPER, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, launchDevTools]],
-  ['v', HYPER, ['Code', false, false, launchVSC]],
-  ['t', HYPER, ['Terminal', false, false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['f', HYPER, ['Finder', false, false, launchFinder]]
+  ['c', HYPER, ['Google Chrome', false, /^(?!Developer Tools)/, /Picture in Picture/, launchChrome]],
+  ['d', HYPER, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, /Picture in Picture/, launchDevTools]],
+  ['v', HYPER, ['Code', false, false, false, launchVSC]],
+  ['t', HYPER, ['Terminal', false, false, false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
+  ['f', HYPER, ['Finder', false, false, false, launchFinder]]
 ];
 
-setHandlers ( focusWindow, focus );
+setKeysHandler ( focusWindow, focus );
